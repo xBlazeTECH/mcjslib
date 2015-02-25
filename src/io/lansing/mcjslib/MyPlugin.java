@@ -4,22 +4,29 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
 
-	@Override
-	public void onDisable() {
-		// TODO Auto-generated method stub
-		super.onDisable();
-	}
-
+	private RunningModule[] modules = {
+		// TODO Add Modules Here...	
+	};
+	
 	@Override
 	public void onEnable() {
-		// TODO Auto-generated method stub
-		super.onEnable();
+		for (int i = 0; i < modules.length; i++) {
+			modules[i].onEnable();
+		}
 	}
-
+	
 	@Override
 	public void onLoad() {
-		// TODO Auto-generated method stub
-		super.onLoad();
+		for (int i = 0; i < modules.length; i++) {
+			modules[i].onLoad();
+		}
+	}
+	
+	@Override
+	public void onDisable() {
+		for (int i = 0; i < modules.length; i++) {
+			modules[i].onDisable();
+		}
 	}
 	
 }
