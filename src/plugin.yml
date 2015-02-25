@@ -1,0 +1,5 @@
+name: Minecraft Javascript Library
+desc: An interface that makes it possible to create javascript bukkit/spigot plugins.
+version: 1.0.0
+author: Lansing Nye-Madden
+main: io.lansing.mcjslib.MyPlugin
