@@ -1,2 +1,2 @@
-# mcjslib
-An interface that makes it possible to create javascript bukkit/spigot plugins.
+# Minecraft Javascript Library (mcjslib)
+mcjslib is a project that should eventually make it possible to create bukkit/spigot sub-plugins in javascript using node.js and socket.io. The way that I plan that it will work is that it will allow for the usage of the Bukkit API through the construction of a http server interface. The project is still in development and any suggestions are welcomed. I would love to have assistance with the project, so feel free to contact me@lansing.io if you want to lend a hand. Thank you!
