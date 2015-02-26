@@ -17,21 +17,21 @@ public class MyPlugin extends JavaPlugin {
 			this.getServer().getPluginManager().registerEvents(listeners[i], this);
 		}
 		for (int i = 0; i < modules.length; i++) {
-			modules[i].onEnable();
+			modules[i].onEnable(this);
 		}
 	}
 	
 	@Override
 	public void onLoad() {
 		for (int i = 0; i < modules.length; i++) {
-			modules[i].onLoad();
+			modules[i].onLoad(this);
 		}
 	}
 	
 	@Override
 	public void onDisable() {
 		for (int i = 0; i < modules.length; i++) {
-			modules[i].onDisable();
+			modules[i].onDisable(this);
 		}
 	}
 	
