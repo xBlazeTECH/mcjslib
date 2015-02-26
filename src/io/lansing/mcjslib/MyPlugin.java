@@ -1,21 +1,17 @@
 package io.lansing.mcjslib;
 
+import io.lansing.mcjslib.module.EventModule;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
 
 	private RunningModule[] modules = {
-		// TODO Add Modules Here...	
-	};
-	private ActiveListener[] listeners = {
-		// TODO Add Listeners Here...
+		new EventModule()
 	};
 	
 	@Override
 	public void onEnable() {
-		for (int i = 0; i < listeners.length; i++) {
-			this.getServer().getPluginManager().registerEvents(listeners[i], this);
-		}
 		for (int i = 0; i < modules.length; i++) {
 			modules[i].onEnable(this);
 		}
